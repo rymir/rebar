@@ -145,7 +145,7 @@ run_eunit(Config, CodePath, SrcErls) ->
     ok = cover:stop(),
 
 	
-    KeepGoing = rebar_config:get_global(Config, keep_going, false),
+    KeepGoing = rebar_config:get_xconf(Config, keep_going, false),
     
     case {EunitResult, KeepGoing} of
  	{ok, _} ->
